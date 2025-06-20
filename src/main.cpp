@@ -29,7 +29,6 @@ class $modify(NewLevelEditorLayer, LevelEditorLayer){
 	}
 
 	void onStopPlaytest(){
-
 		getBackgroundMusicTimeMilli(&SongStoppedAt, 0);
 
 		LevelEditorLayer::onStopPlaytest();
@@ -43,17 +42,16 @@ class $modify(NewEditorPauseLayer, EditorPauseLayer){
 			return false;
 		}
 
-		auto pCVar4 = CCString::createWithFormat("Song stopped at %i", SongStoppedAt);
-		auto pcVar8 = pCVar4->getCString();
-		auto piVar2 = CCLabelBMFont::create(pcVar8, "chatFont.fnt");
+		auto text = CCString::createWithFormat("Song stopped at %i", SongStoppedAt);
+		auto text_cstr = text->getCString();
+		auto label = CCLabelBMFont::create(text_cstr, "chatFont.fnt");
 		auto pos_x = CCDirector::sharedDirector()->getWinSize().width / 2;
 		auto pos_y = 306;
 
-
-		piVar2->setPositionX(pos_x);
-		piVar2->setPositionY(pos_y);
-		piVar2->setScale(0.65);
-		this->addChild(piVar2);
+		label->setPositionX(pos_x);
+		label->setPositionY(pos_y);
+		label->setScale(0.65);
+		this->addChild(label);
 
 		return true;
 	}
