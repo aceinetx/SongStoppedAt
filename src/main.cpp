@@ -53,6 +53,7 @@ class $modify(NewEditorPauseLayer, EditorPauseLayer){
 		label->setPositionX(pos_x);
 		label->setPositionY(pos_y);
 		label->setScale(0.65);
+		label->setID("song-stopped-at");
 		this->addChild(label);
 
 		return true;
