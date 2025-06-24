@@ -1,5 +1,5 @@
 {
-	"geode": "4.0.1",
+	"geode": "4.5.0",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
@@ -8,10 +8,10 @@
 	},
 	"id": "aceinetx.song_stopped_at",
 	"name": "Song Stopped At",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "aceinetx",
 	"links": {
 		"source": "https://github.com/aceinetx/SongStoppedAt"
 	},
-	"description": "Brings back the fully functional \"Song stopped at\" label"
+	"description": "Brings back the \"Song stopped at\" label"
 }
