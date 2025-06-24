@@ -8,17 +8,19 @@ using namespace geode::prelude;
 unsigned int SongStoppedAt = 0;
 
 void getBackgroundMusicTimeMilli(unsigned int *i, int index) {
-	FMOD::Channel* channel;
-	FMOD_RESULT result;
+  FMOD::Channel *channel;
+  FMOD_RESULT result;
 
-	result = FMODAudioEngine::get()->m_backgroundMusicChannel->getChannel(index, &channel);
-	if(result != FMOD_OK){
-		return;
-	}
+  result = FMODAudioEngine::get()->m_backgroundMusicChannel->getChannel(
+      index, &channel);
+  if (result != FMOD_OK) {
+    return;
+  }
 
-	result = channel->getPosition(i, FMOD_TIMEUNIT_MS);	
+  result = channel->getPosition(i, FMOD_TIMEUNIT_MS);
 }
 
+// clang-format off
 class $modify(NewLevelEditorLayer, LevelEditorLayer){
 	bool init(GJGameLevel * p0, bool p1){
 		if (!LevelEditorLayer::init(p0, p1)){
