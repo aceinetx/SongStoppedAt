@@ -1,3 +1,6 @@
+# 1.1.2
+- Add support for the playbacak button
+
 # 1.0.2
 - Bump geode version (4.5.0 -> 4.9.0)
 
