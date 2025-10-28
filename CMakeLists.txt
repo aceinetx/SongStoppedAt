@@ -7,7 +7,10 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 project(SongStoppedAt VERSION 1.0.0)
 
 add_library(${PROJECT_NAME} SHARED
-    src/main.cpp
+    src/hooks/EditorPauseLayer.cc
+    src/hooks/EditorUI.cc
+    src/hooks/LevelEditorLayer.cc
+    src/songstoppedat.cc
     # Add any extra C++ source files here
 )
 
